@@ -1,0 +1,13 @@
+# Virtual Environment (Sabse badi problem)
+venv/
+env/
+
+# PyCharm hidden files
+.idea/
+
+# Python cache files (Kachra files jo Python khud banata hai)
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
