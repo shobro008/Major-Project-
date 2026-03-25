@@ -15,8 +15,9 @@ print(df.columns)
 # Change 'Datetime' to the actual name of your time column in Excel
 time_col = 'time'
 
-# Convert to datetime format and set as index
 df[time_col] = pd.to_datetime(df[time_col], format='%Y%m%d:%H%M')
+# YEH NAYI LINE ADD KAREIN: UTC ko IST mein shift karne ke liye (+ 5.5 hours)
+df[time_col] = df[time_col] + pd.Timedelta(hours=5, minutes=30)
 df.set_index(time_col, inplace=True)
 
 # ==========================================
